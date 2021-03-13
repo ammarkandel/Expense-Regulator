@@ -1,27 +1,15 @@
-<%= form_with(model: transaction, local: true) do |f| %>
-  <div class="field">
-    <div class="control">
-      <%= f.label :description, class: "label" %>
-      <%= f.text_field :description, class: "textarea" %>
-    </div>
-  </div>
+<%= simple_form_for(@transaction) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="field">
-    <div class="control">
-      <%= f.label :amount, class: "label" %>
-      <%= f.number_field :amount, class: "number-field" %>
+    <div class="form-inputs">
+      <%= f.input :name, required: true, label_html: { class: 'text-dark h4' } %>
+      <%= f.input :amount,required: true, label_html: { class: 'text-dark h4' } %>
+      <%= f.association :group, required: false, include_blank: "", label_html: { class: 'text-dark h4' } %>
     </div>
-  </div>
 
-  <div class="field">
-    <div class="control">
-      <%= f.submit "Create Event", class:"button" %>
-    </div>
-  </div>
 
-  <div class="field">
-    <div class="control">
-      <%= link_to 'Cancel', transactions_path, class:"button" %>
+    <div class="form-actions">
+      <%= f.button :submit %>
     </div>
-  </div>
 <% end %>

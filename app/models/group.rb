@@ -1,5 +1,6 @@
 class Group < ApplicationRecord
-  belongs_to :creator, class_name: 'User'
-  has_many :groupedtransactions
-  has_many :transactions, through: :groupedtransactions
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :icon, presence: true
+  belongs_to :user
+  has_many :transactions
 end

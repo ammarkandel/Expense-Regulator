@@ -1,0 +1,6 @@
+<h1>Show</h1>
+<img src=<%= @transaction.group.icon %> />
+<h4><%= @transaction.name %></h4>
+<p><%= @transaction.created_at.strftime('%d %b %Y') %></p>
+<h4>Group: <%= @transaction.group.name %></h4>
+<h4>Amout: $<%= @transaction.amount %></h4>

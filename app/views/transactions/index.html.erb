@@ -1,3 +1,12 @@
-<% @transactions.each do |transaction| %>
-  <span><%= transaction.description %></span>
+<h1>Index</h1>
+<h4>Total amout:  $<%= @transaction_sum %></h4>
+<% @user_transactions.each do |transaction| %>
+  <ul>
+    <li><%= transaction.name %></li>
+    <li>Category: <%= transaction.gname %> %></li>
+    <li><%= transaction.amount %></li>
+    <li><%= transaction.created_at.strftime('%d-%m-%Y') %></li>
+  </ul>
 <% end %>
+
+<%= link_to('Add New Transaction', new_transaction_path) %>

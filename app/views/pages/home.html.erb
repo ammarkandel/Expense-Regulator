@@ -1,0 +1,8 @@
+<h1 class='profile-name' style='text-align: center'> Wellcome: <%= current_user.name %></h1>
+<ul style='list-style-type: none'>
+  <li><%= link_to('My expenses', transactions_path) %></li>
+  <li><%= link_to('None grouped expenses', extransactions_path) %></li>
+  <li><%= link_to('Groups', groups_path) %></li>
+  <li><%= link_to('Members expenses', memberstransactions_path) %></li>
+  <li></li>
+</ul>

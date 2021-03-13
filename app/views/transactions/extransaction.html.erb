@@ -1,0 +1,10 @@
+<span>$<%= @ext_transaction_sum %></span>
+<% @ext_user_transaction.each do |transaction| %>
+  <ul>
+    <li><%= transaction.name %></li>
+    <li><%= transaction.amount %></li>
+    <li><%= transaction.created_at.strftime('%d-%m-%Y') %></li>
+  </ul>
+<% end %>
+
+<%= link_to('Add New Transaction', new_transaction_path) %>

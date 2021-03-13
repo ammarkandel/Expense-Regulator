@@ -1,0 +1,8 @@
+<% @group_transactions.each do |transaction| %>
+  <div><%= transaction.icon %></div>
+  <div><%= transaction.name %></div>
+  <div><%= transaction.gname %></div>
+  <div><%= transaction.uname %></div>
+  <div><%= transaction.created_at.strftime('%d-%m-%Y') %></div>
+  <div>$<%= transaction.amount %></div>
+<% end %>

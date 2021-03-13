@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_up: 'register' }
+  devise_for :users, controllers: { registrations: 'registrations' }
+  resources :groups
   resources :transactions
+  get '/extransactions', to: 'transactions#extransaction'
+  get '/memberstransactions', to: 'transactions#members_transactions'
   devise_scope :user do
     authenticated :user do
-      root 'transactions#index', as: :authenticated_root
+      root 'pages#home', as: :authenticated_root
     end
 
     unauthenticated do
