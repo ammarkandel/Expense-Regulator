@@ -1,10 +1,23 @@
-<span>$<%= @ext_transaction_sum %></span>
+<nav class='nav'>
+  <a href='/' class='burger'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </a>
+
+  <h1>None Grouped</h1>
+
+  <div class='search-icon'></div>
+</nav>
+<h4 class='amount'><span>Total amount:</span>  <span>$<%= @ext_transaction_sum %></span></h4>
 <% @ext_user_transaction.each do |transaction| %>
-  <ul>
-    <li><%= transaction.name %></li>
-    <li><%= transaction.amount %></li>
-    <li><%= transaction.created_at.strftime('%d-%m-%Y') %></li>
+<div class='expenses-details'>
+  <ul class='transaction'>
+    <li>Name: <%= transaction.name %></li>
+    <li>Amount: <%= transaction.amount %></li>
+    <li>Created at: <%= transaction.created_at.strftime('%d-%m-%Y') %></li>
   </ul>
+</div>
 <% end %>
 
-<%= link_to('Add New Transaction', new_transaction_path) %>
+<%= link_to('Add New Transaction', new_transaction_path, class: 'new-expense') %>

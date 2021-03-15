@@ -1,11 +1,19 @@
-<%= render 'nav' %>
+<nav class='nav'>
+  <a href='/' class='burger'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </a>
+
+  <h1>Groups</h1>
+</nav>
+
 <% @groups.each do |group| %>
-  <a class='groups' href="/groups/<%= group.id %>">
-    <div><img class='avatar-img' src=<%= group.icon %> /></div>
-    <div><%= group.name %></div>
+  <a class='expenses-details' href="/groups/<%= group.id %>">
+    <img class='icons' src=<%= group.icon %>>
     <div><%= group.name %></div>
     <div><%= group.created_at.strftime('%d %b %Y') %></div>
   </a>
 <% end %>
 
-<%= link_to('Add New Group', new_group_path) %>
+<%= link_to('Add New Group', new_group_path, class: 'new-expense') %>

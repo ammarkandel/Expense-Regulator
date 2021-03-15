@@ -19,6 +19,7 @@
   color: green;
   text-align: center;
   font-size: 17px;
+  position: absolute;
 }
 
 body {
@@ -33,14 +34,110 @@ body {
   background-color: rgb(241, 243, 242);
 }
 
+.login-back,
 .profile-background {
-  color: green;
-}
-
-.login-back {
   background-color: #3778c2;
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
+}
+
+.login-back h1 {
+  text-align: center;
+  color: white;
+}
+
+.profile-name {
+  text-align: center;
+  color: white;
+}
+
+.profile-links {
+  list-style-type: none;
+}
+
+.profile-links li {
+  margin: 30px;
+  border-bottom: white solid 2px;
+  padding: 10px;
+}
+
+.profile-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
+}
+
+.amount {
+  padding: 20px;
+  margin: 0 10px 10px 10px;
+  border: rgba(185, 185, 185, 0.5) 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expenses-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 15px 15px 15px;
+  border: rgba(185, 185, 185, 0.5) 1px solid;
+  color: #989b96;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.transaction li {
+  list-style-type: none;
+  margin: 10px;
+}
+
+.new-expense {
+  position: absolute;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: #5fb523;
+  width: 100%;
+  font-size: 20px;
+  border: 1px solid white;
+}
+
+.new-expense:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.icons {
+  height: 50px;
+  width: 50px;
+}
+
+nav {
+  height: 70px;
+  background-color: #3778c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: white;
+}
+
+.burger div{
+  background-color: white;
+  height: 2.3px;
+  width: 30px;
+  margin: 10px;
+}
+
+.search-icon {
+  background-image: asset-url('magnifying-glass.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
 }

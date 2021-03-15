@@ -1,12 +1,22 @@
-<h1>Index</h1>
-<h4>Total amout:  $<%= @transaction_sum %></h4>
-<% @user_transactions.each do |transaction| %>
-  <ul>
-    <li><%= transaction.name %></li>
-    <li>Category: <%= transaction.gname %> %></li>
-    <li><%= transaction.amount %></li>
-    <li><%= transaction.created_at.strftime('%d-%m-%Y') %></li>
-  </ul>
-<% end %>
+<nav class='nav'>
+  <a href='/' class='burger'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </a>
 
-<%= link_to('Add New Transaction', new_transaction_path) %>
+  <h1>Transactions</h1>
+</nav>
+<h4 class='amount'><span>Total amount:</span>  <span>$<%= @transaction_sum %></span></h4>
+<% @user_transactions.each do |transaction| %>
+  <div class='expenses-details'>
+    <img class='icons' src=<%= transaction.icon %>>
+    <ul class='transaction'>
+      <li>Expense name: <%= transaction.name %></li>
+      <li>Group name: <%= transaction.gname %></li>
+      <li>Created at: <%= transaction.created_at.strftime('%d-%m-%Y') %></li>
+    </ul>
+    <div>Amount: $<%= transaction.amount %></div>
+  </div>
+<% end %>
+<%= link_to('Add New Transaction', new_transaction_path, class: 'new-expense') %>
