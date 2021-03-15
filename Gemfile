@@ -17,6 +17,8 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'
 gem 'font_awesome5_rails'
 gem 'devise'
 gem 'simple_form'
@@ -45,6 +47,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
 group :test do

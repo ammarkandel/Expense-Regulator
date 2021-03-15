@@ -14,17 +14,33 @@
  *= require_self
  *= require_*
  */
-
-.avatar-img {
-  height: 40px;
-  width: 40px;
+.notice,
+.alert {
+  color: green;
+  text-align: center;
+  font-size: 17px;
 }
 
 body {
-  background-color: red;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 375px;
+  overflow-x: hidden;
+  background-color: rgb(241, 243, 242);
 }
 
-.profile-link {
-  list-style-type: none;
-  color: gray
+.profile-background {
+  color: green;
+}
+
+.login-back {
+  background-color: #3778c2;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
