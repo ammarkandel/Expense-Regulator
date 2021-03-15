@@ -6,8 +6,12 @@
   </a>
 
   <h1>Groups</h1>
-</nav>
 
+  <div class='search-icon'></div>
+</nav>
+<div class='back'>
+  <%= link_to '.', :back, class:'back-arrow' %>
+</div>
 <% @groups.each do |group| %>
   <a class='expenses-details' href="/groups/<%= group.id %>">
     <img class='icons' src=<%= group.icon %>>

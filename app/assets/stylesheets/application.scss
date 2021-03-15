@@ -141,3 +141,18 @@ nav h1 {
   height: 30px;
   width: 30px;
 }
+
+.back {
+  height: 30px;
+  background-color: #3778c2;
+}
+
+.back-arrow {
+  background-image: asset-url('back-arrow.svg');
+  background-repeat: no-repeat;
+  display: block;
+  text-decoration: none;
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
+}
