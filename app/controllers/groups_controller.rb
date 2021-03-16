@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_group, only: %i[show edit update destroy]
+  before_action :set_group, only: %i[show edit update]
 
   def index
     @groups = Group.order(name: :asc).all
@@ -41,13 +41,6 @@ class GroupsController < ApplicationController
       else
         format.html { render :edit }
       end
-    end
-  end
-
-  def destroy
-    @group.destroy
-    respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
     end
   end
 

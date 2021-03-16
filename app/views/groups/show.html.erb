@@ -1,8 +1,27 @@
+<nav class='nav'>
+  <a href='/' class='burger'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </a>
+
+  <h1>Group Details</h1>
+
+  <div class='search-icon'></div>
+</nav>
+<div class='back'>
+  <%= link_to '.', :back, class:'back-arrow' %>
+</div>
+<div class='amount'><span>Amount</span><span>$<%= @group_transaction_sum %></span></div>
+<%= link_to 'Edit', "/groups/#{params[:id]}/edit", class:'btn btn-success', style:'width: 100%' %>
 <% @group_transactions.each do |transaction| %>
+<div class='expenses-details'>
   <div><%= transaction.icon %></div>
   <div><%= transaction.name %></div>
   <div><%= transaction.gname %></div>
   <div><%= transaction.uname %></div>
   <div><%= transaction.created_at.strftime('%d-%m-%Y') %></div>
   <div>$<%= transaction.amount %></div>
+</div>
 <% end %>
+
