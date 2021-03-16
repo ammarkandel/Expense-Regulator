@@ -10,6 +10,8 @@ class TransactionsController < ApplicationController
 
   def show; end
 
+  def edit; end
+
   def new
     @transaction = Transaction.new
   end
@@ -28,6 +30,32 @@ class TransactionsController < ApplicationController
       else
         format.html { render :new }
       end
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @transaction.update(transaction_params)
+        format.html { redirect_to '/transactions', notice: 'Expense was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
+  def destroy
+    no_category = @transaction.group_id.nil?
+    @transaction.destroy
+    if no_category
+      respond_to do |format|
+        format.html { redirect_to '/etransactions', notice: 'Expense was successfully destroyed.' }
+      end
+
+    else
+      respond_to do |format|
+        format.html { redirect_to transactions_url, notice: 'Expense was successfully destroyed.' }
+      end
+
     end
   end
 

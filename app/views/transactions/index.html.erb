@@ -20,6 +20,10 @@
       <li>Expense name: <%= transaction.name %></li>
       <li>Group name: <%= transaction.gname %></li>
       <li>Created at: <%= transaction.created_at.strftime('%d-%m-%Y') %></li>
+      <li>
+          <%= link_to 'Edit', "/transactions/#{transaction.id}/edit", class:'edit-link' %>
+          <%= link_to 'Delete', transaction, method: :delete, data: {confirm: 'Are you sure?'}, class:'delete-link' %>
+      </li>
     </ul>
     <div>Amount: $<%= transaction.amount %></div>
   </div>
