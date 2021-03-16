@@ -1,2 +1,15 @@
-<h1>Add Group</h1>
+<nav class='nav'>
+  <a href='/' class='burger'>
+    <div></div>
+    <div></div>
+    <div></div>
+  </a>
+
+  <h1>New Groups</h1>
+
+  <div class='search-icon'></div>
+</nav>
+<div class='back'>
+  <%= link_to '.', :back, class:'back-arrow' %>
+</div>
 <%= render 'form', group: @group %>

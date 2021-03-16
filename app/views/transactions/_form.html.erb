@@ -3,13 +3,13 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :name, required: true, label_html: { class: 'text-dark h4' } %>
-      <%= f.input :amount,required: true, label_html: { class: 'text-dark h4' } %>
-      <%= f.association :group, required: false, include_blank: "", label_html: { class: 'text-dark h4' } %>
+      <%= f.input :name, required: true, input_html: { class: 'form-control' }, label_html: { class: 'text-dark h4' } %>
+      <%= f.input :amount,required: true, input_html: { class: 'form-control' }, label_html: { class: 'text-dark h4' } %>
+      <%= f.association :group, required: false, include_blank: "", input_html: { class: 'form-control' }, label_html: { class: 'text-dark h4' } %>
     </div>
 
 
     <div class="form-actions">
-      <%= f.button :submit %>
+      <%= f.button :submit, class: 'btn btn-success btn-block' %>
     </div>
 <% end %>
