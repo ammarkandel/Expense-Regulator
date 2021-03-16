@@ -134,9 +134,8 @@ nav {
 }
 
 .search-icon {
-  background: asset-url('magnifying-glass.svg');
+  background: url('../images/magnifying-glass.svg') no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
   height: 30px;
   width: 30px;
 }
@@ -147,8 +146,8 @@ nav {
 }
 
 .back-arrow {
-  background: asset-url('back-arrow.svg');
-  background-repeat: no-repeat;
+  background: url('../images/back-arrow.svg') no-repeat;
+  background-size: cover;
   display: block;
   text-decoration: none;
   margin-left: 20px;
