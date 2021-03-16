@@ -24,7 +24,6 @@
 
 body {
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   height: 100%;
@@ -41,6 +40,10 @@ body {
   top: 0;
   height: 100%;
   width: 100%;
+}
+
+nav h1 {
+  color: white;
 }
 
 .login-back h1 {
@@ -123,11 +126,7 @@ nav {
   align-items: center;
 }
 
-nav h1 {
-  color: white;
-}
-
-.burger div{
+.burger div {
   background-color: white;
   height: 2.3px;
   width: 30px;
@@ -135,7 +134,7 @@ nav h1 {
 }
 
 .search-icon {
-  background-image: asset-url('magnifying-glass.svg');
+  background: asset-url('magnifying-glass.svg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 30px;
@@ -148,7 +147,7 @@ nav h1 {
 }
 
 .back-arrow {
-  background-image: asset-url('back-arrow.svg');
+  background: asset-url('back-arrow.svg');
   background-repeat: no-repeat;
   display: block;
   text-decoration: none;
@@ -174,4 +173,3 @@ a:hover {
 .selecting-avatar {
   display: flex;
 }
-
