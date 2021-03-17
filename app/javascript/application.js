@@ -1,7 +1,7 @@
-//= require jquery3
 //= require popper
+//= require jquery
+//= require jquery_ujs
 //= require bootstrap-sprockets
-//= require font_awesome5
 import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/dist/css/bootstrap'
 require("stylesheets/application.scss")
