@@ -4,16 +4,16 @@ default: &default
   timeout: 5000
   host: localhost
   username: devrails
-  password: <%= ENV['Expense_Regulator_DATABASE_PASSWORD'] %>
+  password: <%= ENV['expense_regulator_count_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
-  database: Expense_Regulator_development
+  database: expense_regulator_count_development
 
 test:
   <<: *default
-  database: Expense_Regulator_test
+  database: expense_regulator_count_test
 
 production:
   <<: *default
-  database: Expense_Regulator_production
+  database: expense_regulator_count_production
