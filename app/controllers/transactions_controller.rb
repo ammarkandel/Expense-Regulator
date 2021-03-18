@@ -48,7 +48,7 @@ class TransactionsController < ApplicationController
     @transaction.destroy
     if no_category
       respond_to do |format|
-        format.html { redirect_to '/etransactions', notice: 'Expense was successfully destroyed.' }
+        format.html { redirect_to '/extransactions', notice: 'Expense was successfully destroyed.' }
       end
 
     else

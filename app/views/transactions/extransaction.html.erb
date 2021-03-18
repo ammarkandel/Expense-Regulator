@@ -20,6 +20,7 @@
     <li>Amount: <%= transaction.amount %></li>
     <li>Created at: <%= transaction.created_at.strftime('%d-%m-%Y') %></li>
   </ul>
+  <span><%= link_to 'Delete', transaction, method: :delete, data: {confirm: 'Are you sure?'}, class:'delete-link' %><span>
 </div>
 <% end %>
 
