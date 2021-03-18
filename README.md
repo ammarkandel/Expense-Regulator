@@ -2,7 +2,12 @@
 
 #### This project built for mobile views
 
+## Live Demo
+
+[Live demo](https://tranquil-shore-89088.herokuapp.com/)
+
 ## What it does
+
 - The user signs up logs in to the app.
 
 - The user is presented with a profile page that includes links to all my expenses, none grouped expenses, groups, membersexpenses.
@@ -15,8 +20,8 @@
 
 - When the user opens "Create new group" or "Add new transaction" page. A form with all necessary fields is displayed.
 
-
 ## How to run this project
+
 - Install Ruby.
 - Install Ruby on Rails.
 - Install bundle.
@@ -25,9 +30,10 @@
 - Go to "http:localhost:3000"
 
 ## Test-driven development RSPEC
+
 The code includes unit testing using RSpec. To start the test run the next line in your terminal:
 
-` bundle exec rspec `
+`bundle exec rspec`
 
 ## Author
 
@@ -38,6 +44,7 @@ The code includes unit testing using RSpec. To start the test run the next line 
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ammar-kandel-7b4100193/)
 
 ## Contributing
+
 This is a project for educational purposes only. We are not accepting contributions.
 
 ## Show your support
