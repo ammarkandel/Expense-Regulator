@@ -73,6 +73,7 @@ nav h1 {
   text-decoration: none;
   color: white;
   font-size: 35px;
+  line-height: 30px;
 }
 
 .amount {
@@ -136,26 +137,12 @@ nav {
   margin: 10px;
 }
 
-.search-icon {
-  background: url("../images/magnifying-glass.svg") no-repeat;
-  background-size: cover;
-  height: 30px;
-  width: 30px;
-}
-
 .back {
-  height: 30px;
-  background-color: #3778c2;
-}
-
-.back-arrow {
-  background: url("../images/back-arrow.svg") no-repeat;
-  background-size: cover;
-  display: block;
   text-decoration: none;
-  margin-left: 20px;
-  height: 30px;
-  width: 30px;
+  font-size: 18px;
+  color: #5fb523;
+  margin: 20px;
+  display: block;
 }
 
 a:hover {

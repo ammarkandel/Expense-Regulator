@@ -9,9 +9,7 @@
 
   <div class='search-icon'></div>
 </nav>
-<div class='back'>
-  <%= link_to '.', :back, class:'back-arrow' %>
-</div>
+<%= link_to '<<<back', :back, class: 'back' %>
 <h4 class='amount'><span>Total amount:</span>  <span>$<%= @transaction_sum %></span></h4>
 <% @user_transactions.each do |transaction| %>
   <div class='expenses-details'>

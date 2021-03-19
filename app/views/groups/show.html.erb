@@ -9,9 +9,7 @@
 
   <div class='search-icon'></div>
 </nav>
-<div class='back'>
-  <%= link_to '.', :back, class:'back-arrow' %>
-</div>
+  <%= link_to '<<<back', :back, class: 'back' %>
 <div class='amount'><span>Amount</span><span>$<%= @group_transaction_sum %></span></div>
 <%= link_to 'Edit', "/groups/#{params[:id]}/edit", class:'btn btn-success', style:'width: 100%' %>
 <% @group_transactions.each do |transaction| %>
