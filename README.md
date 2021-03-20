@@ -25,9 +25,13 @@
 - Install Ruby.
 - Install Ruby on Rails.
 - Install bundle.
-- Run "bundle install" inside the folder.
-- Run "rails server" inside folder.
-- Go to "http:localhost:3000"
+- Make sure you inside the folder (terminal).
+- Run `bundle install`
+- Run `yarn`
+- Run `rails db:create`
+- Run `rails db:migrate`
+- Run `rails server`
+- Go to `http:localhost:3000`
 
 ## Test-driven development RSPEC
 
