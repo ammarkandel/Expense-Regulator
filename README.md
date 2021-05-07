@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-[Live demo](https://tranquil-shore-89088.herokuapp.com/)
+[Live demo](https://expenses-regulator.herokuapp.com/)
 
 ## What it does
 
