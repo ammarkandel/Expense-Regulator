@@ -1,22 +1,16 @@
-<nav class='nav'>
-  <a href='/' class='burger'>
-    <div></div>
-    <div></div>
-    <div></div>
-  </a>
+<%= render 'nav' %>
 
-  <h1>Groups</h1>
-
-  <div class='search-icon'></div>
-</nav>
-  <%= link_to '<<<back', :back, class: 'back' %>
-<% @groups.each do |group| %>
-<%= link_to 'Delete', group, method: :delete, data: {confirm: 'Are you sure?'}, class:'delete-link group-delete' %>
-  <a class='expenses-details' href="/groups/<%= group.id %>">
-    <img class='icons' src=<%= group.icon %>>
-    <div><%= group.name %></div>
-    <div><%= time_ago_in_words(group.created_at) %> ago</div>
-  </a>
-<% end %>
-
-<%= link_to('Add New Group', new_group_path, class: 'new-expense') %>
+<h1 class='groups-title'>Groups</h1>
+<ul class='groups-list'>
+  <% @groups.each do |group| %>
+    <li>
+      <%= link_to group_path(group.id), class: 'group' do %>
+        <img src=<%= group.icon %> class='icons'>
+        <span><%= group.name %></span>
+        <span><%= time_ago_in_words(group.created_at) %> ago</span>
+        <%= link_to 'Delete', group_path(group), method: :delete, data: {confirm: 'Are you sure?'}, class:'delete' %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Add New Group", new_group_path, class: 'btn btn-success new-group' %>

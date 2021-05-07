@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   context 'test creation valid user' do
     it 'return true if is created a valid user' do
-      u1 = User.new({ email: 'test1@s.com', name: 'Test1', password: '123456', password_confirmation: '123456' })
+      u1 = User.new({ email: 'test12@s.com', name: 'Test21', password: '123456', password_confirmation: '123456' })
       u1.save
       expect(u1.valid?).to eq(true)
     end

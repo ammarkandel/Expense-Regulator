@@ -1,0 +1,11 @@
+<%= render 'nav' %>
+<div class='background'>
+  <h1 class='text-center welcome'>Welcome: <%= current_user.name %></h1>
+  <div class='home-links'>
+    <%= link_to 'groups', groups_path, class:'home-link' %>
+    <%= link_to 'ungrouped expenses', ungrouped_path, class:'home-link' %>
+    <%= link_to 'All expenses', expenses_path, class:'home-link' %>
+    <%= link_to 'Members', members_path, class:'home-link' %>
+  </div>
+  <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'form-control btn btn-danger' %>
+</div>

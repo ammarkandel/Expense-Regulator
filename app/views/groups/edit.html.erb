@@ -1,13 +1,2 @@
-<nav class='nav'>
-  <a href='/' class='burger'>
-    <div></div>
-    <div></div>
-    <div></div>
-  </a>
-
-  <h1>Edit Group</h1>
-
-  <div class='search-icon'></div>
-</nav>
-<%= link_to '<<<back', :back, class: 'back' %>
+<%= render 'nav' %>
 <%= render 'form', group: @group %>

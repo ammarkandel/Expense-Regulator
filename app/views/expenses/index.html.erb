@@ -1,0 +1,17 @@
+<%= render 'nav' %>
+
+<h1 class='expenses-title'>Expenses</h1>
+<div class='details'>
+  <h3>Total amount</h3>
+  <h3>$<%= @user_expenses %></h3>
+</div>
+
+<% @expenses.each do |expense| %>
+  <ul class='details'>
+    <li>amount <h4>$<%= expense.amount %></h4></li>
+    <li>name<h4><%= expense.name %></h4></li>
+    <li><%= link_to 'Delete', expense_path(expense), method: :delete, data: {confirm: 'Are you sure?'}, class:'delete' %></li>
+  </ul>
+<% end %>
+
+<%= link_to 'Add New Transaction', new_expense_path, class: 'btn btn-success' %>
