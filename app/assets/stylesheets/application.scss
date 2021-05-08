@@ -193,6 +193,12 @@ label {
   width: 3rem;
 }
 
+.checkboxs span {
+  background-color: $third-color;
+  padding: 4px;
+  margin-top: 5px;
+}
+
 .burger span:not(:last-child) {
   margin-bottom: 0.8rem;
 }
@@ -208,12 +214,6 @@ label {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 5px;
-}
-
-.checkboxs span {
-  background-color: $third-color;
-  padding: 4px;
-  margin-top: 5px;
 }
 
 .groups-title,
