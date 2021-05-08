@@ -26,6 +26,18 @@
 
 ![screenshot](./app/assets/images/screen-2.png)
 
+![screenshot](./app/assets/images/screen-3.png)
+
+![screenshot](./app/assets/images/screen-4.png)
+
+![screenshot](./app/assets/images/screen-5.png)
+
+![screenshot](./app/assets/images/screen-6.png)
+
+![screenshot](./app/assets/images/screen-7.png)
+
+![screenshot](./app/assets/images/screen-8.png)
+
 ## How to run this project
 
 - Install Ruby.
