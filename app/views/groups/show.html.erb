@@ -1,0 +1,16 @@
+<%= render 'nav' %>
+<div class='details'>
+  <h3><%= @group.name %></h3>
+  <h3>Total amount: $<%= @group_amount %></h3>
+</div>
+
+<h2 class='text-center'>Belongs Expenses</h2>
+<% @group_expenses.each do |expense| %>
+  <ul class='details'>
+    <li><%= expense.name %></li>
+    <li>$<%= expense.amount %></li>
+  </ul>
+<% end %>
+
+<%= link_to 'Edit', edit_group_path, class: 'btn btn-danger' %>
+<%= link_to 'Add New Transaction', new_expense_path, class: 'btn btn-success' %>

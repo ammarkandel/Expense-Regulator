@@ -1,0 +1,16 @@
+<%= render 'nav' %>
+
+<h1 class='expenses-title'>Ungrouped expenses</h1>
+<div class='details'>
+  <h3>Total amount</h3>
+  <h3>$<%= @ungrouped_amount %></h3>
+</div>
+
+<% @ungrouped_expenses.each do |ungrouped_expense| %>
+  <ul class='details'>
+    <li>name: <%= ungrouped_expense.name %></li>
+    <li>amount: $<%= ungrouped_expense.amount %></li>
+  </ul>
+<% end %>
+
+<%= link_to 'Add New Transaction', new_expense_path, class: 'btn btn-success' %>

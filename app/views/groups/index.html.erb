@@ -1,0 +1,16 @@
+<%= render 'nav' %>
+
+<h1 class='groups-title'>Groups</h1>
+<ul class='groups-list'>
+  <% @groups.each do |group| %>
+    <li>
+      <%= link_to group_path(group.id), class: 'group' do %>
+        <img src=<%= group.icon %> class='icons'>
+        <span><%= group.name %></span>
+        <span><%= time_ago_in_words(group.created_at) %> ago</span>
+        <%= link_to 'Delete', group_path(group), method: :delete, data: {confirm: 'Are you sure?'}, class:'delete' %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Add New Group", new_group_path, class: 'btn btn-success new-group' %>

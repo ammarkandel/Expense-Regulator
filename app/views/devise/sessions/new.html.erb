@@ -1,0 +1,39 @@
+<div class='background'>
+  <nav class='sign-navbar'>
+    Welcome to
+    <div class='logo'>
+    <img src="<%= asset_path( 'money.svg' ) %>" height='30' width='40' />
+    ExpensesRegulator
+    </div>
+  </nav>
+
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class:'form-control' %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'btn btn-secondary' %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
