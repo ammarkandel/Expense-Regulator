@@ -20,6 +20,12 @@
 
 - When the user opens "Create new group" or "Add new transaction" page. A form with all necessary fields is displayed.
 
+## App screens
+
+![screenshot](./app/assets/images/screen-1.png)
+
+![screenshot](./app/assets/images/screen-2.png)
+
 ## How to run this project
 
 - Install Ruby.
