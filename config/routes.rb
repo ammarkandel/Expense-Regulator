@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :groups
 
   get '/members', to: 'profiles#members'
+
+  match ':not_found' => redirect('/'), constraints: { :not_found => /.*/ }, via: [:get, :post]
 end
