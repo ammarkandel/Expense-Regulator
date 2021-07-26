@@ -1,6 +1,4 @@
 class ExpensesController < ApplicationController
-  before_action :authenticate_user!
-
   def index
     @expenses = current_user.expenses
     @user_expenses = Expense.where(user_id: current_user).total_amount
