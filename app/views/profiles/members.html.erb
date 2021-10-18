@@ -1,6 +1,7 @@
-<%= render 'nav' %>
+<%= render partial: 'shared/nav' %>
 
 <h1 class='text-center'>Members total expenses</h1>
+
 <% @members.each do |member| %>
   <ul class='details'>
     <li><%= member.name %></li>

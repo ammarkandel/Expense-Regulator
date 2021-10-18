@@ -1,6 +1,7 @@
-<%= render 'nav' %>
+<%= render partial: 'shared/nav' %>
 
 <h1 class='groups-title'>Groups</h1>
+
 <ul class='groups-list'>
   <% @groups.each do |group| %>
     <li>
@@ -13,4 +14,5 @@
     </li>
   <% end %>
 </ul>
+
 <%= link_to "Add New Group", new_group_path, class: 'btn btn-success new-group' %>
