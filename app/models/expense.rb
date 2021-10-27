@@ -1,6 +1,6 @@
 class Expense < ApplicationRecord
   validates :name, presence: true
-  validates_numericality_of :amount, greater_than: 0
+  validates_numericality_of :amount, greater_than: 0, numericality: true
 
   belongs_to :user
   has_many :expense_groups
