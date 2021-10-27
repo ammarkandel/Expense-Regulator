@@ -1,0 +1,5 @@
+<ul class='details'>
+  <li>amount <h4>$<%= expense.amount %></h4></li>
+  <li>name<h4><%= expense.name %></h4></li>
+  <li><%= link_to 'Delete', expense_path(expense), method: :delete, data: {confirm: 'Are you sure?'}, class:'delete' %></li>
+</ul>

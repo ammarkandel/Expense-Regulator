@@ -5,12 +5,7 @@
 
 <h2 class='text-center'>Belongs Expenses</h2>
 
-<% @group_expenses.each do |expense| %>
-  <ul class='details'>
-    <li><%= expense.name %></li>
-    <li>$<%= expense.amount %></li>
-  </ul>
-<% end %>
+<%= render partial: 'shared/expense', collection: @group_expenses %>
 
 <%= link_to 'Edit', edit_group_path, class: 'btn btn-danger' %>
 <%= link_to 'Add New Transaction', new_expense_path, class: 'btn btn-success' %>

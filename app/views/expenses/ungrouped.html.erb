@@ -5,11 +5,6 @@
   <h3>$<%= @ungrouped_amount %></h3>
 </div>
 
-<% @ungrouped_expenses.each do |ungrouped_expense| %>
-  <ul class='details'>
-    <li>name: <%= ungrouped_expense.name %></li>
-    <li>amount: $<%= ungrouped_expense.amount %></li>
-  </ul>
-<% end %>
+<%= render partial: 'shared/expense', collection: @ungrouped_expenses %>
 
 <%= link_to 'Add New Transaction', new_expense_path, class: 'btn btn-success' %>
