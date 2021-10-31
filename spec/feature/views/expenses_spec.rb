@@ -19,11 +19,6 @@ RSpec.describe 'Expense Views', type: :feature do
     expect(page).to have_content('Ungrouped expenses')
   end
 
-  it 'visit groups' do
-    find('a', text: 'groups').click
-    expect(page).to have_content('Groups')
-  end
-
   it 'visit members expenses' do
     find('a', text: 'Members').click
     expect(page).to have_content('Members total expenses')

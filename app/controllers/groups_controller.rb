@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
   def destroy
     respond_to do |format|
       if @group.destroy
-        format.html { redirect_to groups_path, notice: 'Expense was deleted successfuly' }
+        format.html { redirect_to groups_path, notice: 'Group was deleted successfuly' }
       else
         format.html { render 'index' }
       end
