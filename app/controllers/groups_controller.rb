@@ -10,8 +10,8 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group_amount = @group.expenses.total_amount
     @group_expenses = @group.expenses
+    @group_amount = @group_expenses.total_amount
   end
 
   def destroy
@@ -37,10 +37,10 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-    @group.user_id = current_user.id
+    group = current_user.groups.new(group_params)
+
     respond_to do |format|
-      if @group.save
+      if group.save
         format.html { redirect_to groups_path, notice: 'Group was created successfuly' }
       else
         format.html { render 'new' }
@@ -51,7 +51,7 @@ class GroupsController < ApplicationController
   private
 
   def set_group
-    @group = Group.find(params[:id])
+    @group = Group.find_by_id(params[:id])
   end
 
   def group_params

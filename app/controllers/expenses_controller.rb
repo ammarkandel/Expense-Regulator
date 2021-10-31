@@ -1,13 +1,15 @@
 class ExpensesController < ApplicationController
+  before_action :user_expenses, except: [:destroy]
+
   def index
-    @expenses = current_user.expenses
-    @user_expenses = Expense.where(user_id: current_user).total_amount
+    @expenses_amount = @expenses.total_amount
   end
 
   def destroy
-    @expense = Expense.find(params[:id])
+    expense = Expense.find_by_id(params[:id])
+
     respond_to do |format|
-      if @expense.destroy
+      if expense.destroy
         format.html { redirect_to expenses_path, notice: 'Expense was deleted successfuly' }
       else
         format.html { render 'index' }
@@ -17,14 +19,14 @@ class ExpensesController < ApplicationController
 
   def new
     @expense = Expense.new
-    @current_user_groups = current_user.groups
+    @user_groups = current_user.groups
   end
 
   def create
-    @expense = Expense.new(expense_params)
-    @expense.user_id = current_user.id
+    expense = @expenses.new(expense_params)
+
     respond_to do |format|
-      if @expense.save
+      if expense.save
         format.html { redirect_to expenses_path, notice: 'Expense was created successfuly' }
       else
         format.html { render 'new' }
@@ -33,11 +35,15 @@ class ExpensesController < ApplicationController
   end
 
   def ungrouped
-    @ungrouped_expenses = current_user.expenses.none_grouped_expenses
+    @ungrouped_expenses = @expenses.none_grouped_expenses
     @ungrouped_amount = @ungrouped_expenses.total_amount
   end
 
   private
+
+  def user_expenses
+    @expenses = current_user.expenses
+  end
 
   def expense_params
     params.require(:expense).permit(:name, :amount, :user_id, group_ids: [])

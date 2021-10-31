@@ -7,7 +7,7 @@
     <%= f.input :amount,required: true, input_html: { class: 'form-control' }, label_html: { class: 'text-dark h4' } %>
 
     <fieldset class='checkboxs'>
-    <%= f.collection_check_boxes :group_ids, @current_user_groups, :id, :name do |cb| %>
+    <%= f.collection_check_boxes :group_ids, @user_groups, :id, :name do |cb| %>
       <%= cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
     <% end %>
     </fieldset>
