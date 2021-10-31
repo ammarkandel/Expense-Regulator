@@ -13,16 +13,19 @@ RSpec.describe Group, type: :model do
 
   it 'Expected group to be invalid if missing name' do
     subject.name = nil
+
     expect(subject).to_not be_valid
   end
 
   it 'Expected group to be invalid if missing icon' do
     subject.icon = nil
+
     expect(subject).to_not be_valid
   end
 
   it 'Expected group to be invalid missing user' do
     subject.user_id = nil
+
     expect(subject).to_not be_valid
   end
 end

@@ -18,6 +18,12 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
 
+    it 'Expected not valid with the name is less characters' do
+      subject.name = 'cc'
+
+      expect(subject).to_not be_valid
+    end
+
     it 'Expected not valid without the password' do
       subject.password = nil
 
@@ -30,8 +36,28 @@ RSpec.describe User, type: :model do
       expect(subject).to_not be_valid
     end
 
+    it 'Expected not valid with the less characters' do
+      subject.password = '123'
+      subject.password_confirmation = '123'
+
+      expect(subject).to_not be_valid
+    end
+
+    it 'Expected not valid with the password_confirmation not equal the password' do
+      subject.password = '123456789'
+      subject.password_confirmation = '12345678'
+
+      expect(subject).to_not be_valid
+    end
+
     it 'Expected not valid without the email' do
       subject.email = nil
+
+      expect(subject).to_not be_valid
+    end
+
+    it 'Expected not valid with invalid email' do
+      subject.email = 'invalidemail.com'
 
       expect(subject).to_not be_valid
     end
