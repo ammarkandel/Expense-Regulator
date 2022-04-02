@@ -8,10 +8,18 @@
 
   <div class="selecting-avatar">
     <div>
-      <%= image_tag("default-group", class: 'icons', alt: "avatar_image") %>
+      <%= image_tag("images/default-group.png", class: 'icons', alt: "avatar_image") %>
       <br>
-      <%= f.radio_button :icon, "default-group", checked: true, class: 'radio-default' %>
+      <%= f.radio_button :icon, "images/default-group.png", checked: true, class: 'radio-default' %>
     </div>
+
+    <% Dir.glob('app/assets/images/group_icons/*').each do |path| %>
+      <div>
+        <%= image_tag("group_icons/#{ File.basename(path) }", class: 'icons', alt: "avatar_image") %>
+        <br>
+        <%= f.radio_button :icon, "group_icons/#{ File.basename(path) }" %>
+      </div>
+    <% end %>
   </div>
 
   <div class="form-actions">
